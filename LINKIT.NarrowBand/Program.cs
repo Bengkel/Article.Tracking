@@ -19,18 +19,14 @@ namespace LINKIT.NBLTE
         static int _retry = 0;
         static int _maximumRetry = 3;
 
-        //static string _deviceId = "<YOUR-DEVICE-NAME>";
-        //static string _hubName = "<YOUR-IOT-HUB-NAME>";
-        static string _deviceId = "itnext01";
-        static string _hubName = "itnext-weu-iot";
+        static string _deviceId = "<YOUR-DEVICE-NAME>";
+        static string _hubName = "<YOUR-IOT-HUB-NAME>";
 
         //INFO https://learn.microsoft.com/en-us/azure/iot-hub/iot-hub-dev-guide-sas?tabs=node#authenticating-a-device-to-iot-hub
         static string _username = $"{_hubName}.azure-devices.net/{_deviceId}/?api-version=2021-04-12";
 
         //REMARK Generate SAS token for IoT Hub with VS Code
-        //static string _password = $"<YOUR-SAS-TOKEN>";
-        static string _password = $"SharedAccessSignature sr=itnext-weu-iot.azure-devices.net%2Fdevices%2Fitnext01&sig=eWnQOAIjOIivKijAGtSao3rCo2RuFyItl6vSoiy3Z2M%3D&se=1710956708";
-
+        static string _password = $"<YOUR-SAS-TOKEN>";
 
         //INFO https://learn.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-messages-c2d
         static string _subTopic = $"devices/{_deviceId}/messages/devicebound/#";
